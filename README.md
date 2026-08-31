@@ -1,12 +1,11 @@
-# CocoaMojo for Intel Macs
+# CocoaMojo — Releases
 
 <p align="center"><img src="docs/installer.png" width="560"
    alt="The Install Roast window: compiler, editor, stdlib, optional Python, and the Cocoa database built on this Mac"></p>
 
-**Mojo, Cocoa, and the Roast IDE on Intel Mac hardware** — a compiler that
-builds native Mac apps from Mojo source (windows, Metal GPU kernels,
-CoreAudio), the language server and debugger behind it, and an editor written
-in the language it edits.
+**Mojo, Cocoa, and the Roast IDE** — a compiler that builds native Mac apps
+from Mojo source (windows, Metal GPU kernels, CoreAudio), the language server
+and debugger behind it, and an editor written in the language it edits.
 
 This is a release repository: **download the DMG from
 [Releases](../../releases)**, not the source tree. The tree holds the
@@ -14,18 +13,24 @@ installer's own source, for the curious.
 
 ---
 
-## Requirements
+## Supported machines
 
-- An Intel Mac. Two flavors exist — install the one for your machine:
+Two ports are released here, each built native and verified on its own
+hardware before imaging:
 
-  | image | built for | runs on |
+  | image | machine | GPU |
   |---|---|---|
-  | `Roast-Intel-<ver>.dmg` | 2019 Mac Pro (Xeon, AVX-512) | AVX-512 Macs only |
-  | `MojoToolchain-v3-<ver>.dmg` | any Intel Mac (x86-64-v3, AVX2) | every Intel Mac that runs current macOS |
+  | `Roast-Intel-<ver>.dmg` | 2019 Mac Pro — Intel Xeon (AVX-512) | AMD Radeon Pro **Vega II** |
+  | `Roast-<ver>.dmg` | Apple Silicon — **M4** family | Apple GPU |
 
-  Pick wrong and nothing breaks silently: the installer checks your CPU
-  before copying, and then *runs the compiler* as its final step — a flavor
-  your machine can't execute fails with an explanation, not a crash report.
+  **Only these, at this time.** A portable x86-64-v3 flavor for other Intel
+  Macs (Radeon Pro 5300M and similar) is built and gated, but that GPU is
+  **untested** — it is not released here until it has been.
+
+  Pick the wrong image and nothing breaks silently: the installer checks
+  your CPU before copying, and then *runs the compiler* as its final step —
+  an image your machine can't execute fails with an explanation, not a
+  crash report.
 
 - macOS 15 or later.
 - ~1.5 GB free in `/Applications`. No admin password is needed —
@@ -86,9 +91,10 @@ The toolchain is the [MojoMacX64](https://github.com/albanread/MojoMacX64)
 fork: Mojo with an Objective-C `class` keyword (declare real Cocoa classes
 in Mojo; the runtime calls them), typed Cocoa calls checked at compile time
 against the SDK database, and GPU kernels compiled through Apple's Metal AIR
-— the same source drives an AMD Vega II, a Navi 5300M, or Apple silicon on
-the sister fork. The editor, its language server client, and its debugger
-adapter are all written in Mojo itself.
+— the same source drives the Vega II on the Intel port and the Apple GPU on
+the [Apple Silicon port](https://github.com/albanread/MojoCocoa). The editor,
+its language server client, and its debugger adapter are all written in Mojo
+itself.
 
-Releases are cut on a 2019 Mac Pro, verified by a 34-check gate before
-imaging, and signed off-box.
+Each port's release is cut on its own machine, verified by its distribution
+gate before imaging, and signed and notarized.
