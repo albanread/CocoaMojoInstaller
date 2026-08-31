@@ -1,5 +1,8 @@
 # CocoaMojo for Intel Macs
 
+<p align="center"><img src="docs/installer.png" width="560"
+   alt="The Install Roast window: compiler, editor, stdlib, optional Python, and the Cocoa database built on this Mac"></p>
+
 **Mojo, Cocoa, and the Roast IDE on Intel Mac hardware** — a compiler that
 builds native Mac apps from Mojo source (windows, Metal GPU kernels,
 CoreAudio), the language server and debugger behind it, and an editor written
