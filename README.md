@@ -19,14 +19,22 @@ language.
 
 ## Download
 
+Both images are signed and notarized. Open the one for your Mac,
+double-click *Install Roast*, press Install.
+
+➡ **Apple Silicon (M-series):
+[Roast-2026.08.31.dmg](../../releases/download/arm-2026.08.31/Roast-2026.08.31.dmg)**
+— 173 MB. ([release notes](../../releases/tag/arm-2026.08.31))
+
 ➡ **Mac Pro 2019 (Intel Xeon, Radeon Pro Vega II):
 [Roast-Intel-2026.08.31.dmg](../../releases/download/intel-2026.08.31/Roast-Intel-2026.08.31.dmg)**
-— 235 MB, signed and notarized. Open it, double-click *Install Roast*,
-press Install. ([release notes](../../releases/tag/intel-2026.08.31))
+— 235 MB. ([release notes](../../releases/tag/intel-2026.08.31))
 
-The Apple Silicon (M4) image is cut from the
-[sister port](https://github.com/albanread/MojoCocoa) and lands here beside
-it. All releases: [Releases](../../releases).
+Not sure which? Apple menu → About This Mac: "Apple M1/M2/M3/M4" means the
+first, "Intel" the second. Picking wrong costs nothing — the installer checks
+your CPU before it copies anything.
+
+All releases: [Releases](../../releases).
 
 ---
 
@@ -38,7 +46,7 @@ hardware before imaging:
   | image | machine | GPU |
   |---|---|---|
   | `Roast-Intel-<ver>.dmg` | 2019 Mac Pro — Intel Xeon (AVX-512) | AMD Radeon Pro **Vega II** |
-  | `Roast-<ver>.dmg` | Apple Silicon — **M4** family | Apple GPU |
+  | `Roast-<ver>.dmg` | Apple Silicon — **M-series** (built on M4) | Apple GPU |
 
   **Only these, at this time.** A portable x86-64-v3 flavor for other Intel
   Macs (Radeon Pro 5300M and similar) is built and gated, but that GPU is
@@ -49,7 +57,7 @@ hardware before imaging:
   an image your machine can't execute fails with an explanation, not a
   crash report.
 
-- macOS 15 or later.
+- macOS 15 or later on Apple Silicon; macOS 13 or later on the Intel image.
 - ~1.5 GB free in `/Applications`. No admin password is needed —
   `/Applications` is group-writable by design.
 
@@ -100,7 +108,8 @@ already have:
             libLLVM, libMLIR, …     one shared copy, used by every tool above
             mojo/                   the standard library, as editable source
           share/
-            examples/               fifteen projects, hello to GPU fluid dynamics
+            examples/               seventeen projects, from hello to GPU
+                                    fluid dynamics and real-time audio
             ide-source/             Roast's own source — the largest example
             cocoa.sqlite            the SDK database, built on YOUR Mac at
                                     install time from your own frameworks
