@@ -1,0 +1,8 @@
+# build output: payload, staged DMG, the signed image
+dist/
+
+# personal signing identity and notary profile (see .example)
+tools/signing.local.sh
+
+# Finder droppings
+.DS_Store
