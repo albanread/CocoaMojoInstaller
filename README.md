@@ -23,8 +23,8 @@ Both images are signed and notarized. Open the one for your Mac,
 double-click *Install Roast*, press Install.
 
 ➡ **Apple Silicon (M-series):
-[Roast-2026.08.31.dmg](../../releases/download/arm-2026.08.31/Roast-2026.08.31.dmg)**
-— 173 MB. ([release notes](../../releases/tag/arm-2026.08.31))
+[Roast-2026.08.31.1.dmg](../../releases/download/arm-2026.08.31.1/Roast-2026.08.31.1.dmg)**
+— 173 MB. ([release notes](../../releases/tag/arm-2026.08.31.1))
 
 ➡ **Mac Pro 2019 (Intel Xeon, Radeon Pro Vega II):
 [Roast-Intel-2026.08.31.dmg](../../releases/download/intel-2026.08.31/Roast-Intel-2026.08.31.dmg)**
@@ -96,8 +96,8 @@ already have:
     /Applications/Roast/
       Roast.app                     the IDE — open this
       CocoaMojo/
-        current -> 2026.08.31       the version that answers; a symlink
-        2026.08.31/                 a complete, self-contained toolchain:
+        current -> 2026.08.31.1     the version that answers; a symlink
+        2026.08.31.1/               a complete, self-contained toolchain:
           bin/
             cocoamojo               compile and run Mojo (--build, --run)
             cocoamojo-compiler      the compiler itself
