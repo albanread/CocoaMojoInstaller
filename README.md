@@ -79,20 +79,42 @@ hardware before imaging:
        /Applications/Roast/CocoaMojo/current/share/examples/mandelbrot/main.mojo
    ```
 
-## What you get
+## What gets installed, and where
 
-    bin/cocoamojo         compile and run Mojo (--build, --run)
-    bin/mojo-lsp-server   completions and diagnostics, for any LSP editor
-    bin/lldb, lldb-dap    the debugger, with Mojo support loaded
-    bin/python3           the bundled CPython Mojo interops with
-    lib/mojo/             the standard library, as editable source
-    share/examples/       fifteen projects, from hello to GPU fluid dynamics
-    share/ide-source/     Roast's own source — the largest example there is
-    Roast.app             the IDE (full flavor only)
+Everything lands under **one folder**, `/Applications/Roast` — the installer
+touches nothing else on your Mac, changes no PATH, and shadows no Python you
+already have:
 
-Your own work is never inside the install: edited stdlib, examples, and
-per-project Python environments live in
-`~/Library/Application Support/Roast/`.
+    /Applications/Roast/
+      Roast.app                     the IDE — open this
+      CocoaMojo/
+        current -> 2026.08.31       the version that answers; a symlink
+        2026.08.31/                 a complete, self-contained toolchain:
+          bin/
+            cocoamojo               compile and run Mojo (--build, --run)
+            cocoamojo-compiler      the compiler itself
+            mojo-lsp-server         completions and diagnostics, any LSP editor
+            lldb, lldb-dap          the debugger, Mojo support loaded
+            python3                 the bundled CPython (reachable here, only)
+          lib/
+            libLLVM, libMLIR, …     one shared copy, used by every tool above
+            mojo/                   the standard library, as editable source
+          share/
+            examples/               fifteen projects, hello to GPU fluid dynamics
+            ide-source/             Roast's own source — the largest example
+            cocoa.sqlite            the SDK database, built on YOUR Mac at
+                                    install time from your own frameworks
+          Python/                   Python.framework (only if you ticked it)
+
+Installing a newer version lands it **beside** the old one and moves the
+`current` symlink — nothing is overwritten, and stepping back is one symlink.
+
+Your own work never lives inside the install. Edited stdlib, examples, IDE
+source, and the per-project Python environments Roast creates are all in
+
+    ~/Library/Application Support/Roast/
+
+which Uninstall leaves alone unless you explicitly tick the box.
 
 ## Reset and Uninstall
 
