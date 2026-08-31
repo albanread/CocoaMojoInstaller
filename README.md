@@ -1,15 +1,32 @@
-# CocoaMojo — Releases
+# CocoaMojo
 
 <p align="center"><img src="docs/installer.png" width="560"
    alt="The Install Roast window: compiler, editor, stdlib, optional Python, and the Cocoa database built on this Mac"></p>
 
-**Mojo, Cocoa, and the Roast IDE** — a compiler that builds native Mac apps
-from Mojo source (windows, Metal GPU kernels, CoreAudio), the language server
-and debugger behind it, and an editor written in the language it edits.
+**CocoaMojo is Mojo as a first-class Mac language.** One toolchain that
+compiles Mojo source into native Mac applications — real windows through
+AppKit, declared as Objective-C classes *in Mojo*; GPU kernels lowered
+through Apple's Metal AIR; audio on CoreAudio's own thread — plus the
+language server and debugger behind it, and **Roast**, a Mac IDE for Mojo
+written in Mojo, which installs with its own source as the largest example
+in the box.
 
-This is a release repository: **download the DMG from
-[Releases](../../releases)**, not the source tree. The tree holds the
-installer's own source, for the curious.
+The same source runs across the fleet: the 2019 Intel Mac Pro drives an AMD
+Radeon Pro Vega II with it, and the
+[Apple Silicon port](https://github.com/albanread/MojoCocoa) drives the M4's
+GPU from the identical programs. Two machines, two GPU generations, one
+language.
+
+## Download
+
+➡ **Mac Pro 2019 (Intel Xeon, Radeon Pro Vega II):
+[Roast-Intel-2026.08.31.dmg](../../releases/download/intel-2026.08.31/Roast-Intel-2026.08.31.dmg)**
+— 235 MB, signed and notarized. Open it, double-click *Install Roast*,
+press Install. ([release notes](../../releases/tag/intel-2026.08.31))
+
+The Apple Silicon (M4) image is cut from the
+[sister port](https://github.com/albanread/MojoCocoa) and lands here beside
+it. All releases: [Releases](../../releases).
 
 ---
 
