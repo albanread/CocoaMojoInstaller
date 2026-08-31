@@ -108,7 +108,7 @@ already have:
             libLLVM, libMLIR, …     one shared copy, used by every tool above
             mojo/                   the standard library, as editable source
           share/
-            examples/               seventeen projects, from hello to GPU
+            examples/               eighteen projects, from hello to GPU
                                     fluid dynamics and real-time audio
             ide-source/             Roast's own source — the largest example
             cocoa.sqlite            the SDK database, built on YOUR Mac at
