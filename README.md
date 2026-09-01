@@ -27,8 +27,8 @@ double-click *Install Roast*, press Install.
 — 173 MB. ([release notes](../../releases/tag/arm-2026.09.01.1))
 
 ➡ **Mac Pro 2019 (Intel Xeon, Radeon Pro Vega II):
-[Roast-Intel-2026.08.31.dmg](../../releases/download/intel-2026.08.31/Roast-Intel-2026.08.31.dmg)**
-— 235 MB. ([release notes](../../releases/tag/intel-2026.08.31))
+[Roast-Intel-2026.09.01.dmg](../../releases/download/intel-2026.09.01/Roast-Intel-2026.09.01.dmg)**
+— 222 MB. ([release notes](../../releases/tag/intel-2026.09.01))
 
 Not sure which? Apple menu → About This Mac: "Apple M1/M2/M3/M4" means the
 first, "Intel" the second. Picking wrong costs nothing — the installer checks
